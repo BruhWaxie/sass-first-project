@@ -6,8 +6,11 @@
     background: #010001
     display: flex
     
+    justify-content: center
+    align-items: center
+    
 
-    &-inner
+    .header-inner
         width: 1231px
         height: 16px
         background: #010001
@@ -15,19 +18,20 @@
         display: flex
         align-self: center
         justify-content: space-between
-        font-size: 14px
+        font-size: 16px
 
         &-logo
             width: 138px
             height: 16px
 
         &-main-text
-            color: white
             display: flex
 
-        &-main-text p
+        &-main-text a
             margin-right: 20px
             cursor: pointer
+            text-decoration: none
+            color: white
             
             
         &-secondary-text
@@ -35,5 +39,44 @@
             color: #808080
             cursor: pointer
 
-        &-secondary-text p
+        &-secondary-text a
             margin-left: 20px
+            color: #808080
+            text-decoration: none
+
+
+    
+@media ( max-width: 900px) 
+    .header
+        height: 75px
+
+    .header-inner
+        width: 80%
+        padding-right: 15px
+        padding-left: 30px
+
+        .header-inner-main-text
+            display: none
+    
+
+
+
+@media (max-width: 400px)   
+    .header
+        .header-inner
+            display: flex
+            justify-content: center
+
+            &-secondary-text
+                display: none
+
+
+                
+    
+
+    
+    
+
+
+
+

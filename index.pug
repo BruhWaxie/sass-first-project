@@ -9,17 +9,19 @@ html(lang="en")
         .container 
             header.header 
                 .header-inner 
-                    img(src='static/logo.svg')
+                    a.logo(href="#") 
+                        img(src='static/logo.svg')
                     div.header-inner-main-text
-                        p Falcon 9
-                        p Falcon Heavy
-                        p Dragon
-                        p Updates
+                        a(href='#') Falcon 9
+                        a(href='#') Falcon Heavy
+                        a(href='#') Dragon
+                        a(href='#') Updates
                     
                     div.header-inner-secondary-text
-                        p About
-                        p Gallery
-                        p Shop
+                        a(href='#') About
+                        a(href='#') Gallery
+                        a(href='#') Shop
+
             main.main
                 h1.main-title Falcon Heavy
                 p The most powerful operational rocket in the world by a factor of two
@@ -62,18 +64,26 @@ html(lang="en")
                         p With more than 5 million pounds of thrust at liftoff, Falcon Heavy is the most capable rocket flying. By comparison, the liftoff thrust of the Falcon Heavy equals approximately eighteen 747 aircraft at full power. Falcon Heavy can lift the equivalent of a fully loaded 737 jetliner—complete with passengers, luggage and fuel—to orbit.
                 img.falcon-img(src='static/falcon.png')
             footer.footer
-                img.footer-logo(src="static/logo.svg", alt="")
+                a.logo(href="#") 
+                    img.footer-logo(src="static/logo.svg", alt="")
 
                 .socials 
-                    span Twitter
-                    span Youtube
-                    span Instagram
-                    span Flickr
-                    span LinkedIn
-                    span Privacy
-                    span Policy
+                    span 
+                        a(href='#') Twitter
+                    span 
+                        a(href='#') Youtube
+                    span 
+                        a(href='#') Instagram
+                    span 
+                        a(href='#') Flickr
+                    span 
+                        a(href='#') LinkedIn
+                    span 
+                        a(href='#') Privacy
+                    span 
+                        a(href='#') Policy
 
                 .email 
                     span For additional questions, contact rideshare@spacex.com
                 
-                a(href="http://", target="_blank", rel="noopener noreferrer") Contact Us
+                a.button(href="#") Contact Us
