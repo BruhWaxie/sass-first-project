@@ -196,7 +196,7 @@ hamburgerBtn.addEventListener('click', () => {
     // міняємо картинку посеред анімації (прибл. на 40%)
     setTimeout(() => {
         icon.src = isOpen 
-            ? './static/cross-svgrepo-com (1).svg'
+            ? './static/cross-svgrepo-com.svg'
             : './static/hamburger-menu-svgrepo-com.svg';
     }, 240); // 40% від 0.6s = 0.24s
 
