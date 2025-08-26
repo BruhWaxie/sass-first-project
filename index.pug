@@ -5,63 +5,103 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         link(rel="stylesheet", href="style.css")
+        
     body
-        .container 
+        .container
+            .nav-space
             header.header 
                 .header-inner 
                     a.logo(href="#") 
                         img(src='static/logo.svg')
                     div.header-inner-main-text
-                        a(href='#') Falcon 9
-                        a(href='#') Falcon Heavy
-                        a(href='#') Dragon
-                        a(href='#') Updates
+                        a.trans-target(href='#') Falcon 9
+                        a.trans-target(href='#') Falcon Heavy
+                        a.trans-target(href='#') Dragon
+                        a.trans-target(href='#') Updates
                     
                     div.header-inner-secondary-text
-                        a(href='#') About
-                        a(href='#') Gallery
-                        a(href='#') Shop
+                        a.trans-target(href='#') About
+                        a.trans-target(href='#') Gallery
+                        a.trans-target(href='#') Shop
+
+                    
+                    .buttons
+                        button.trans-target.btn.btn-ua UA
+                        
+                        button.trans-target.btn.btn-en EN
+
+                    .mobile-menu
+                        button.hamburger hamburger
+
+                    
+            nav.hamburger-menu
+                    ul
+                        li 
+                            a(href='#') Falcon 9
+                        li 
+                            a(href='#') Falcon Heavy
+                        li 
+                            a(href='#') Dragon
+                        li 
+                            a(href='#') Updates
+
+                        li 
+                            a(href='#') About
+
+                        li 
+                            a(href='#') Gallery
+
+                        li 
+                            a(href='#') Shop
+                        
 
             main.main
-                h1.main-title Falcon Heavy
-                p The most powerful operational rocket in the world by a factor of two
+                h1.main-title.trans-target Falcon Heavy
+                p.trans-target The most powerful operational rocket in the world by a factor of two
                 div.vertical-line
                 img.planet(src='static/planet.png')
             section.falcon
                 .info-falcon
-                    h2.overview FALCON HEAVY OVERVIEW
+                    h2.overview.trans-target FALCON HEAVY OVERVIEW
                     .columns 
                         .column1 
-                            p HEIGHT 
-                            p DIAMETER 
-                            p MASS
-                            p PAYLOAD TO LEO 
-                            p PAYLOAD TO GTO
-                            p PAYLOAD TO MARS 
+                            p.trans-target HEIGHT 
+                            p.trans-target DIAMETER 
+                            p.trans-target MASS
+                            p.trans-target PAYLOAD TO LEO 
+                            p.trans-target PAYLOAD TO GTO
+                            p.trans-target PAYLOAD TO MARS 
 
                         .column2 
-                            p 70 m /
-                                span.secondary  229.6 ft 
+
+                            .column2-text
+                                p.trans-target 70 m /
+                                span.secondary.trans-target  229.6 ft 
+                            .column2-text
                             
-                            p 12.2 m /
-                                span.secondary  39.9 ft  
+                                p.trans-target 12.2 m /
+                                span.secondary.trans-target  39.9 ft  
+                            .column2-text
 
-                            p 1,420,788 kg /
-                                span.secondary  3,125,735 lb
+                                p.trans-target 1,420,788 kg /
+                                span.secondary.trans-target  3,125,735 lb
+                            .column2-text
 
-                            p 63,800 kg /
-                                span.secondary  140,660 lb  
+                                p.trans-target 63,800 kg /
+                                span.secondary.trans-target  140,660 lb  
+                            .column2-text
 
-                            p 26,700 kg /
-                                span.secondary  58,860 lb
+                                p.trans-target 26,700 kg /
+                                span.secondary.trans-target  58,860 lb
+                            .column2-text
 
-                            p 16,800 kg /
-                                span.secondary  37,040 lb
+                                p.trans-target 16,800 kg /
+                                span.secondary.trans-target  37,040 lb
 
 
-                    h2.perfomance UNMATCHED PERFOMANCE
+                    h2.perfomance.trans-target UNMATCHED PERFOMANCE
                     .perfomance-text
-                        p With more than 5 million pounds of thrust at liftoff, Falcon Heavy is the most capable rocket flying. By comparison, the liftoff thrust of the Falcon Heavy equals approximately eighteen 747 aircraft at full power. Falcon Heavy can lift the equivalent of a fully loaded 737 jetliner—complete with passengers, luggage and fuel—to orbit.
+                        p.trans-target With more than 5 million pounds of thrust at liftoff, Falcon Heavy is the most capable rocket flying. By comparison, the liftoff thrust of the Falcon Heavy equals approximately eighteen 747 aircraft at full power. Falcon Heavy can lift the equivalent of a fully loaded 737 jetliner—complete with passengers, luggage and fuel—to orbit.
                 img.falcon-img(src='static/falcon.png')
             footer.footer
                 a.logo(href="#") 
@@ -79,11 +119,13 @@ html(lang="en")
                     span 
                         a(href='#') LinkedIn
                     span 
-                        a(href='#') Privacy
+                        a.trans-target(href='#') Privacy
                     span 
-                        a(href='#') Policy
+                        a.trans-target(href='#') Policy
 
                 .email 
-                    span For additional questions, contact rideshare@spacex.com
+                    span.trans-target For additional questions, contact rideshare@spacex.com
                 
-                a.button(href="#") Contact Us
+                a.button.trans-target(href="#") Contact Us
+
+    script(src="script.js")
