@@ -21,9 +21,40 @@
   justify-content: space-between;
   justify-self: center;
   font-size: 16px;
+  align-items: center;
 }
 .header .header-inner .mobile-menu {
   display: none;
+}
+.header .header-inner .mobile-menu {
+  display: none;
+}
+.header .header-inner .burger-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+}
+.header .header-inner .burger-icon.animating {
+  animation: rotateBlur 0.6s forwards;
+}
+@keyframes rotateBlur {
+  0% {
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+  40% {
+    transform: rotate(60deg);
+    filter: blur(5px);
+  }
+  70% {
+    transform: rotate(120deg);
+    filter: blur(2.5px);
+  }
+  100% {
+    transform: rotate(180deg);
+    filter: blur(0px);
+  }
 }
 .header .header-inner-logo {
   width: 138px;
@@ -141,7 +172,7 @@ nav {
   margin: 0;
 }
 .falcon .column1 {
-  width: 300px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -223,6 +254,25 @@ body {
   background: #010001;
 }
 
+.btn {
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.btn:last-child {
+  padding-left: 10px;
+}
+
+.btn:first-child {
+  border-right: 1px solid white;
+}
+
 @media (max-width: 1024px) {
   .container {
     width: 90vw;
@@ -235,11 +285,15 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .container .btn {
+    font-weight: 600;
+    font-size: 16px;
+  }
   .container header {
     transition: background 0.5s;
   }
   .container header .header-inner {
-    z-index: 2000;
+    z-index: 4000;
   }
   .container header .header-inner-secondary-text {
     display: none;
@@ -250,6 +304,12 @@ body {
   .container header .header-inner .mobile-menu {
     display: block;
     margin-right: 10px;
+  }
+  .container header .header-inner .mobile-menu img {
+    width: 25px;
+  }
+  .container header .header-inner .mobile-menu img .toggled {
+    transform: rotate(360deg);
   }
   .container .hamburger-menu {
     display: block;
@@ -286,6 +346,15 @@ body {
     font-weight: 600;
     font-size: 24px;
   }
+  .container .hamburger-menu ul li .secondary {
+    color: #9f9f9f;
+  }
+  .container .hamburger-menu ul li button {
+    color: #5f5f5f;
+  }
+  .container .hamburger-menu ul li button:first-child {
+    border-right: 3px solid #5f5f5f;
+  }
   .container .open-menu {
     width: 100%;
   }
@@ -298,9 +367,6 @@ body {
   .container .falcon .info-falcon {
     margin-top: -220px;
     margin-left: -15px;
-  }
-  .container .falcon .column2 {
-    margin-left: -50px;
   }
   .container .falcon .secondary {
     display: none;
